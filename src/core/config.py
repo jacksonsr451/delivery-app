@@ -1,6 +1,3 @@
 from typing import Any
 
-
-config: dict[str, Any] = {
-
-}
+config: dict[str, Any] = {}

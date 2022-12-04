@@ -1,15 +1,11 @@
 from typing import Any
 
-
 UserDTO: dict[str, Any] = {
     'id': '',
     'username': '',
     'password': '',
     'role_id': '',
-    'role': {
-        'id': '',
-        'role': ''
-    },
+    'role': {'id': '', 'role': ''},
     'profile_id': '',
     'profile': {
         'id': '',
@@ -21,7 +17,7 @@ UserDTO: dict[str, Any] = {
         'phone': '',
         'whattsapp': '',
         'telegran': '',
-        'email': ''
+        'email': '',
     },
     'address_id': '',
     'address': {
@@ -30,6 +26,6 @@ UserDTO: dict[str, Any] = {
         'state': '',
         'neigborhod': '',
         'street': '',
-        'number': ''
-    }
+        'number': '',
+    },
 }
