@@ -1,8 +1,8 @@
 from typing import Any
 from flask import Flask
 
-from src.controllers.home_controller import HomeController
+from .home_controller import home_controller
 
 
 def init_controllers(app: Flask, config: dict[str, Any]):
-    HomeController(app=app)
+    home_controller(app=app)
