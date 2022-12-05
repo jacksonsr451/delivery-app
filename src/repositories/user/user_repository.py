@@ -54,7 +54,5 @@ class UserRepository(UserRepositoryInterface):
 
     def view(self, id: str) -> UserReponse:
         return (
-            self.__session.query(UserModel)
-            .filter(UserModel.id == id)
-            .first()
+            self.__session.query(UserModel).filter(UserModel.id == id).first()
         )

@@ -51,7 +51,5 @@ class RoleRepository(RoleRepositoryInterface):
 
     def view(self, id: str) -> RoleResponse:
         return (
-            self.__session.query(RoleModel)
-            .filter(RoleModel.id == id)
-            .first()
+            self.__session.query(RoleModel).filter(RoleModel.id == id).first()
         )

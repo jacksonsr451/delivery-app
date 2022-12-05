@@ -1,17 +1,18 @@
 from abc import ABC, abstractmethod
 from types import NoneType
 
-from src.requests.address_request import AddressRequest
+from flask import Request
+
 from src.response.address_response import AddressResponse
 
 
-class AddressRepositoryInterface(ABC):
+class AddressServicesInterface(ABC):
     @abstractmethod
-    def create(self, request: AddressRequest) -> NoneType:
+    def create(self, request: Request) -> NoneType:
         """This method is required"""
 
     @abstractmethod
-    def update(self, request: AddressRequest) -> NoneType:
+    def update(self, request: Request) -> NoneType:
         """This method is required"""
 
     @abstractmethod
