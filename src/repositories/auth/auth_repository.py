@@ -5,7 +5,6 @@ from sqlalchemy.orm import Session
 from src.exceptions.user_exception import UserException
 from src.models.user_model import UserModel
 from src.requests.auth_request import AuthRequest
-from src.response.auth_response import AuthReponse
 
 from .auth_repository_interface import AuthRepositoryInterface
 

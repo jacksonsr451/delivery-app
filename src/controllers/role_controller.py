@@ -3,9 +3,7 @@ from flask import Flask, request
 from src.services.role import RoleServicesInterface
 
 
-def init_role_controllers(
-    app: Flask, services: RoleServicesInterface
-) -> None:
+def init_role_controllers(app: Flask, services: RoleServicesInterface) -> None:
     @app.route('/admin/roles', methods=['POST'])
     def create_role():
         try:

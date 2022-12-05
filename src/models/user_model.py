@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, String
+from sqlalchemy import Column, ForeignKey, String, Boolean
 from sqlalchemy.orm import relationship
 
 from src.core.database import Base
@@ -18,3 +18,18 @@ class UserModel(Base):
     contact = relationship('ContactModel', foreign_keys=[contact_id])
     address_id = Column(String, ForeignKey('addresses.id'))
     address = relationship('AddressModel', foreign_keys=[address_id])
+    status = Column(Boolean)
+
+    def __init__(self, data: object) -> None:
+        self.id = data.id
+        self.username = data.username
+        self.password = data.password
+        self.role_id = data.role.id
+        self.role = data.role
+        self.profile_id = data.profiele.id
+        self.profile = data.profile
+        self.contact_id = data.contact.id
+        self.contact = data.contact
+        self.address_id = data.address.id
+        self.address = data.address
+        self.status = data.status

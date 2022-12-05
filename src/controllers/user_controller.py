@@ -3,9 +3,7 @@ from flask import Flask, request
 from src.services.user import UserServicesInterface
 
 
-def init_user_controllers(
-    app: Flask, services: UserServicesInterface
-) -> None:
+def init_user_controllers(app: Flask, services: UserServicesInterface) -> None:
     @app.route('/admin/users', methods=['POST'])
     def create_user():
         try:

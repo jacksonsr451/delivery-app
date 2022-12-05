@@ -35,12 +35,6 @@ def init_controllers(app: Flask, config: dict[str, Any]):
     init_profile_controllers(
         app=app, services=config['services']['ProfileServices']
     )
-    init_role_controllers(
-        app=app, services=config['services']['RoleServices']
-    )
-    init_user_controllers(
-        app=app, services=config['services']['UserServices']
-    )
-    init_auth_controllers(
-        app=app, services=config['services']['AuthServices']
-    )
+    init_role_controllers(app=app, services=config['services']['RoleServices'])
+    init_user_controllers(app=app, services=config['services']['UserServices'])
+    init_auth_controllers(app=app, services=config['services']['AuthServices'])
