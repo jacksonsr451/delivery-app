@@ -6,7 +6,7 @@ from src.repositories.role import RoleRepositoryInterface
 from src.requests.role_request import RoleRequest
 from src.response.role_response import RoleResponse
 
-from . import RoleServicesInterface
+from .role_services_interface import RoleServicesInterface
 
 
 class RoleServices(RoleServicesInterface):

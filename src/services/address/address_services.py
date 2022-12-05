@@ -6,7 +6,7 @@ from src.repositories.address import AddressRepositoryInterface
 from src.requests.address_request import AddressRequest
 from src.response.address_response import AddressResponse
 
-from . import AddressServicesInterface
+from .address_services_interface import AddressServicesInterface
 
 
 class AddressServices(AddressServicesInterface):

@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 
 from src.repositories.user import UserRepository, UserRepositoryInterface
 
-from . import UserServicesInterface
+from .user_services_interface import UserServicesInterface
 from .user_services import UserServices
 
 

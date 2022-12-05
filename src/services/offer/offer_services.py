@@ -6,7 +6,7 @@ from src.repositories.offer import OfferRepositoryInterface
 from src.requests.offer_request import OfferRequest
 from src.response.offer_response import OfferResponse
 
-from . import OfferServicesInterface
+from .offer_services_interface import OfferServicesInterface
 
 
 class OfferServices(OfferServicesInterface):

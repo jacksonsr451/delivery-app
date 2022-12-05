@@ -6,7 +6,7 @@ from src.repositories.product import ProductRepositoryInterface
 from src.requests.product_request import ProductRequest
 from src.response.product_response import ProductResponse
 
-from . import ProductServicesInterface
+from .product_services_interface import ProductServicesInterface
 
 
 class ProductServices(ProductServicesInterface):

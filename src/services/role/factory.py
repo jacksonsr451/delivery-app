@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 
 from src.repositories.role import RoleRepository, RoleRepositoryInterface
 
-from . import RoleServicesInterface
+from .role_services_interface import RoleServicesInterface
 from .role_services import RoleServices
 
 

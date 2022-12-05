@@ -6,7 +6,7 @@ from src.repositories.category import CategoryRepositoryInterface
 from src.requests.category_request import CategoryRequest
 from src.response.category_response import CategoryResponse
 
-from . import CategoryServicesInterface
+from .category_services_interface import CategoryServicesInterface
 
 
 class CategoryServices(CategoryServicesInterface):

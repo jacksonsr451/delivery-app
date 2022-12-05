@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 
 from src.repositories.address import AddressRepository, AddressRepositoryInterface
 
-from . import AddressServicesInterface
+from .address_services_interface import AddressServicesInterface
 from .address_services import AddressServices
 
 

@@ -6,7 +6,7 @@ from src.repositories.contact import ContactRepositoryInterface
 from src.requests.contact_request import ContactRequest
 from src.response.contact_response import ContactResponse
 
-from . import ContactServicesInterface
+from .contact_services_interface import ContactServicesInterface
 
 
 class ContactServices(ContactServicesInterface):

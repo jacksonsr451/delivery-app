@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 
 from src.repositories.contact import ContactRepository, ContactRepositoryInterface
 
-from . import ContactServicesInterface
+from .contact_services_interface import ContactServicesInterface
 from .contact_services import ContactServices
 
 

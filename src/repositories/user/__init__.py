@@ -1,2 +1,2 @@
 from .user_repository import UserRepository
-from .user_request_interface import UserRepositoryInterface
+from .user_repository_interface import UserRepositoryInterface

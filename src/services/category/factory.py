@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from src.repositories.category import CategoryRepository, CategoryRepositoryInterface
 
 
-from . import CategoryServicesInterface
+from .category_services_interface import CategoryServicesInterface
 from .category_services import CategoryServices
 
 

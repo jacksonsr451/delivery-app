@@ -6,7 +6,7 @@ from src.repositories.product import ProductRepositoryInterface
 from src.requests.product_request import ProductRequest
 from src.response.profile_response import ProfileResponse
 
-from . import ProfileServicesInterface
+from .profile_services_interface import ProfileServicesInterface
 
 
 class ProfileServices(ProfileServicesInterface):

@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 
 from src.repositories.offer import OfferRepository, OfferRepositoryInterface
 
-from . import OfferServicesInterface
+from .offer_services_interface import OfferServicesInterface
 from .offer_services import OfferServices
 
 

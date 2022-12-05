@@ -6,7 +6,7 @@ from src.repositories.user import UserRepositoryInterface
 from src.requests.user_request import UserRequest
 from src.response.user_response import UserReponse
 
-from . import UserServicesInterface
+from .user_services_interface import UserServicesInterface
 
 
 class UserServices(UserServicesInterface):
