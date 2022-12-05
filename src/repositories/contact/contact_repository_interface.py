@@ -7,11 +7,11 @@ from src.response.contact_response import ContactResponse
 
 class ContactRepositoryInterface(ABC):
     @abstractmethod
-    def create(self, address: ContactRequest) -> NoneType:
+    def create(self, request: ContactRequest) -> NoneType:
         """This method is required"""
 
     @abstractmethod
-    def update(self, address: ContactRequest) -> NoneType:
+    def update(self, request: ContactRequest) -> NoneType:
         """This method is required"""
 
     @abstractmethod
