@@ -8,6 +8,7 @@ from src.controllers.contact_controller import init_contact_controllers
 from src.controllers.offer_controller import init_offer_controllers
 from src.controllers.product_controller import init_product_controllers
 from src.controllers.profile_controller import init_profile_controllers
+from src.controllers.role_controller import init_role_controllers
 
 from .home_controller import home_controller
 
@@ -31,4 +32,7 @@ def init_controllers(app: Flask, config: dict[str, Any]):
     )
     init_profile_controllers(
         app=app, services=config['services']['ProfileServices']
+    )
+    init_role_controllers(
+        app=app, services=config['services']['RoleServices']
     )
