@@ -6,6 +6,7 @@ from src.services.contact import contact_services_factory
 from src.services.offer import offer_services_factory
 from src.services.product import product_services_factory
 from src.services.profile import profile_services_factory
+from src.services.role import role_services_factory
 
 from .database import session
 
@@ -16,6 +17,7 @@ config: dict[str, Any] = {
         'ContactServices': contact_services_factory(session=session),
         'OfferServices': offer_services_factory(session=session),
         'ProductServices': product_services_factory(session=session),
-        'ProfileServices': profile_services_factory(session=session)
+        'ProfileServices': profile_services_factory(session=session),
+        'RoleServices': role_services_factory(session=session)
     }
 }
