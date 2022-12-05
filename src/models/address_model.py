@@ -1,4 +1,5 @@
 from uuid import uuid4
+
 from sqlalchemy import Column, String
 
 from src.core.database import Base
