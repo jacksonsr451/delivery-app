@@ -1,0 +1,1 @@
+from .category_repository_interface import CategoryRepositoryInterface

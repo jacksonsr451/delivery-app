@@ -2,7 +2,7 @@ from types import NoneType
 
 from sqlalchemy.orm import Session
 
-from src.exceptions.AddressException import AddressException
+from src.exceptions.address_exception import AddressException
 from src.models.address_model import AddressModel
 from src.requests.address_request import AddressRequest
 from src.response.address_response import AddressResponse
