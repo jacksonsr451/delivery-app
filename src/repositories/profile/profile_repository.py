@@ -31,10 +31,7 @@ class ProfileRepository(ProfileRepositoryInterface):
         )
         try:
             data.id = request.id
-            data.slug = request.slug
-            data.price = request.price
-            data.resume = request.resume
-            data.description = request.description
+            data.name = request.name
             self.__session.commit()
         except Exception:
             raise ProfileException('Erro ao atualizar dados')
