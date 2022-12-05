@@ -1,4 +1,4 @@
-.content__create_account {
+.content__validate_email {
     flex: 1;
     display: flex;
     height: 100%;
@@ -6,7 +6,7 @@
     justify-content: center;
 
     form {
-        width: 450px;
+        width: 600px;
 
         padding: 1.5rem;
         border-radius: .8rem;
@@ -27,7 +27,7 @@
             font-size: 1.2rem;
 
             label {
-                width: 150px;
+                width: 200px;
                 font-weight: bold;
                 text-align: right;
             }

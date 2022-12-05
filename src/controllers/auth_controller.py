@@ -12,11 +12,35 @@ def init_auth_controllers(app: Flask, services: AuthServicesInterface) -> None:
     def create_account() -> str:
         try:
             services.create(request=request)
-            return redirect(url_for('login'))
+            return redirect(url_for('page_login'))
         except Exception as error:
             print(error)
             return redirect(url_for('index_account'))
 
     @app.route('/auth/login', methods=['GET'])
-    def login() -> str:
+    def page_login() -> str:
         return render_template('pages/auth/login.html')
+
+    @app.route('/auth/login', methods=['POST'])
+    def login() -> str:
+        try:
+            return redirect(url_for('index'))
+        except Exception as error:
+            print(error)
+            return redirect(url_for('page_login'))
+
+    @app.route('/auth/login', methods=['POST'])
+    def logout() -> str:
+        return redirect(url_for('index'))
+
+    @app.route('/auth/validate-email', methods=['GET'])
+    def page_validate_email() -> str:
+        return render_template('pages/auth/validate_email.html')
+
+    @app.route('/auth/validate-email', methods=['POST'])
+    def validate_email() -> str:
+        try:
+            return redirect(url_for('index'))
+        except Exception as error:
+            print(error)
+            return redirect(url_for('page_validate_email'))

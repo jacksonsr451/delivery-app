@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}VALIDAR E-MAIL{% endblock %}
+
+{% block header %}
+<h1>VALIDAR E-MAIL</h1>
+{% endblock %}
+
+{% block content %}
+<div class="content__validate_email">
+    <form action="{{ url_for('validate_email') }}" method="POST">
+        <div class="input">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="input">
+            <label for="confirm-email">Confirme E-Mail:</label>
+            <input type="email" id="confirm-email" name="confirm-email">
+        </div>
+        <div class="button_content">
+            <input class="button" type="submit" value="LOGAR">
+        </div>
+    </form>
+</div>
+{% endblock %}

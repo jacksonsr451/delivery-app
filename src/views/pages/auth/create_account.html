@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
+{% block title %}CRIAR CONTA{% endblock %}
+
 {% block header %}
 <h1>CRIAR CONTA</h1>
 {% endblock %}
 
 {% block content %}
-<div class="content">
+<div class="content__create_account">
     <form action="{{ url_for('create_account') }}" method="POST">
         <div class="input">
             <label for="username">Usuario:</label>
