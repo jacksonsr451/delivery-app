@@ -1,0 +1,4 @@
+DB_URL=sqlite:///dbtest.db
+
+FLASK_APP=src/app:create_app
+FLASK_DEBUG=true
