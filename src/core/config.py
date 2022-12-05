@@ -20,6 +20,6 @@ config: dict[str, Any] = {
         'ProductServices': product_services_factory(session=session),
         'ProfileServices': profile_services_factory(session=session),
         'RoleServices': role_services_factory(session=session),
-        'UserServices': user_services_factory(session=session)
+        'UserServices': user_services_factory(session=session),
     }
 }

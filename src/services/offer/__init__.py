@@ -1,2 +1,2 @@
-from .offer_services_interface import OfferServicesInterface
 from .factory import offer_services_factory
+from .offer_services_interface import OfferServicesInterface

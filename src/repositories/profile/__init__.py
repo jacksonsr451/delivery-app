@@ -1,2 +1,2 @@
-from .profile_repository_interface import ProfileRepositoryInterface
 from .profile_repository import ProfileRepository
+from .profile_repository_interface import ProfileRepositoryInterface

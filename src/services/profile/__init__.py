@@ -1,2 +1,2 @@
-from .profile_services_interface import ProfileServicesInterface
 from .factory import profile_services_factory
+from .profile_services_interface import ProfileServicesInterface

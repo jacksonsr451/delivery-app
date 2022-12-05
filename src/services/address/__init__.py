@@ -1,2 +1,2 @@
-from .factory import address_service_factory
 from .address_services_interface import AddressServicesInterface
+from .factory import address_service_factory
