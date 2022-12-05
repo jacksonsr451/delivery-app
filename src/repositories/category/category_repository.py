@@ -16,24 +16,24 @@ class CategoryRepository(CategoryRepositoryInterface):
     def __init__(self, session: Session) -> None:
         self.__session = session
 
-    def create(self, address: CategoryRequest) -> NoneType:
+    def create(self, request: CategoryRequest) -> NoneType:
         try:
-            self.__session.add(CategoryModel(address))
+            self.__session.add(CategoryModel(request))
             self.__session.commit()
         except Exception:
             raise CategoryException('Erro ao adcionar dados')
 
-    def update(self, address: CategoryRequest) -> NoneType:
+    def update(self, request: CategoryRequest) -> NoneType:
         data = (
             self.__session.query(CategoryModel)
-            .filter(CategoryModel.id == address.id)
+            .filter(CategoryModel.id == request.id)
             .one()
         )
         try:
-            data.id = address.id
-            data.slug = address.slug
-            data.title = address.title
-            data.description = address.descripion
+            data.id = request.id
+            data.slug = request.slug
+            data.title = request.title
+            data.description = request.descripion
             self.__session.commit()
         except Exception:
             raise CategoryException('Erro ao atualizar dados')
@@ -46,10 +46,10 @@ class CategoryRepository(CategoryRepositoryInterface):
             raise CategoryException('Erro ao deletar dados')
 
     def show(self) -> list[CategoryResponse]:
-        addresses_list: list[CategoryResponse] = list()
-        for address in self.__session.query(CategoryModel).all():
-            addresses_list.append(CategoryResponse(address))
-        return addresses_list
+        _list: list[CategoryResponse] = list()
+        for value in self.__session.query(CategoryModel).all():
+            _list.append(CategoryResponse(value))
+        return _list
 
     def view(self, id: str) -> CategoryResponse:
         return (

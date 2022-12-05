@@ -7,11 +7,11 @@ from src.response.category_response import CategoryResponse
 
 class CategoryRepositoryInterface(ABC):
     @abstractmethod
-    def create(self, address: CategoryRequest) -> NoneType:
+    def create(self, request: CategoryRequest) -> NoneType:
         """This method is required"""
 
     @abstractmethod
-    def update(self, address: CategoryRequest) -> NoneType:
+    def update(self, request: CategoryRequest) -> NoneType:
         """This method is required"""
 
     @abstractmethod
