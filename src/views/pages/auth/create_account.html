@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>CRIAR CONTA</h1>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <form action="" method="POST">
+        <div class="input">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div class="input">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password">
+        </div>
+    
+        <div class="input">
+            <label for="validate_password">Repita senha:</label>
+            <input type="password" id="validate_password" name="validate_password">
+        </div>
+        <div class="button_content">
+            <input class="button" type="submit" value="CRIAR">
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -3,6 +3,7 @@ from typing import Any
 from flask import Flask
 
 from src.controllers.address_controllers import init_address_controllers
+from src.controllers.auth_controller import init_auth_controllers
 from src.controllers.category_controller import init_category_controllers
 from src.controllers.contact_controller import init_contact_controllers
 from src.controllers.offer_controller import init_offer_controllers
@@ -38,5 +39,8 @@ def init_controllers(app: Flask, config: dict[str, Any]):
         app=app, services=config['services']['RoleServices']
     )
     init_user_controllers(
+        app=app, services=config['services']['UserServices']
+    )
+    init_auth_controllers(
         app=app, services=config['services']['UserServices']
     )
