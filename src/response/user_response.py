@@ -1,7 +1,7 @@
 from .address_response import AddressResponse
 from .contact_response import ContactResponse
-
 from .profile_response import ProfileResponse
+
 
 class UserReponse:
     id: str

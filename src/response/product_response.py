@@ -8,6 +8,7 @@ ProductDTO: dict[str, Any] = {
     'description': '',
 }
 
+
 class ProductResponse:
     id: str
     slug: str

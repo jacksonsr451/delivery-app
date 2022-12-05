@@ -4,6 +4,7 @@ from typing import Any
 from .category_request import CategoryRequest
 from .product_request import ProductRequest
 
+
 class OfferRequest:
     id: str
     slug: str

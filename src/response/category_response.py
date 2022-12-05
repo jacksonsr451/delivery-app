@@ -6,6 +6,6 @@ class CategoryResponse:
 
     def __init__(self, data: object) -> None:
         self.id = data.id
-        self.slug = data.slug 
-        self.title = data.title 
+        self.slug = data.slug
+        self.title = data.title
         self.description = data.descripion

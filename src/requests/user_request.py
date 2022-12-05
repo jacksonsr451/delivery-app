@@ -1,10 +1,10 @@
 from typing import Any
 
-from .role_request import RoleRequest
 from .address_request import AddressRequest
 from .contact_request import ContactRequest
-
 from .profile_request import ProfileRequest
+from .role_request import RoleRequest
+
 
 class UserRequest:
     id: str

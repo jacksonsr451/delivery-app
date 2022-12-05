@@ -3,6 +3,7 @@ from datetime import date
 from .category_response import CategoryResponse
 from .product_response import ProductResponse
 
+
 class OfferResponse:
     id: str
     slug: str

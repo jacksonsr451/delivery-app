@@ -9,6 +9,6 @@ class CategoryRequest:
 
     def __init__(self, schema: dict[str, Any]) -> None:
         self.id = schema.get('id')
-        self.slug = schema.get('slug') 
-        self.title = schema.get('title') 
+        self.slug = schema.get('slug')
+        self.title = schema.get('title')
         self.description = schema.get('descripion')

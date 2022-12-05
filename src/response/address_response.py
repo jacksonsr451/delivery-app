@@ -1,4 +1,4 @@
-class AddressRequest:
+class AddressResponse:
     id: str
     country: str
     state: str
