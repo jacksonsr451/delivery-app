@@ -1,6 +1,7 @@
 from uuid import uuid4
 
-from sqlalchemy import Column, String
+from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy.orm import relationship
 
 from src.core.database import Base
 from src.requests.address_request import AddressRequest
@@ -15,6 +16,8 @@ class AddressModel(Base):
     neigborhod = Column(String)
     street = Column(String)
     number = Column(String)
+    user_id = Column(String, ForeignKey('users.id'))
+    user = relationship('UserModel', foreign_keys=[user_id])
 
     def __init__(self, request: AddressRequest) -> None:
         self.id = request.id if request.id else uuid4()
