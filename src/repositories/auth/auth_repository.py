@@ -17,10 +17,11 @@ class AuthRepository(AuthRepositoryInterface):
 
     def create(self, request: AuthRequest) -> NoneType:
         try:
+            print(self.__session)
             self.__session.add(UserModel(request))
             self.__session.commit()
-        except Exception:
-            raise UserException('Erro ao adcionar dados')
+        except Exception as error:
+            raise UserException(f'Erro ao adcionar dados: {error}')
 
     def update(self, request: AuthRequest) -> NoneType:
         data = (

@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request
+from flask import Flask, redirect, render_template, request, url_for
 
 from src.services.auth import AuthServicesInterface
 
@@ -12,9 +12,10 @@ def init_auth_controllers(app: Flask, services: AuthServicesInterface) -> None:
     def create_account() -> str:
         try:
             services.create(request=request)
-            return redirect('login')
+            return redirect(url_for('login'))
         except Exception as error:
-            return redirect('index_account')
+            print(error)
+            return redirect(url_for('index_account'))
 
     @app.route('/auth/login', methods=['GET'])
     def login() -> str:

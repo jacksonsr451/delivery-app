@@ -11,7 +11,7 @@ class AuthRequest:
     status: bool
 
     def __init__(self, schema: Request) -> None:
-        self.id = schema.form['id'] if schema.form['id'] else uuid4()
+        self.id = uuid4()
         self.username = schema.form['username']
         self.password = hashpw(
             schema.form['password'].encode('utf8'), gensalt()

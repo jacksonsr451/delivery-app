@@ -10,4 +10,4 @@ Base = declarative_base()
 
 engine = create_engine(os.getenv('DB_URL'))
 
-session = create_session(engine)
+session = create_session(bind=engine, autocommit=False)

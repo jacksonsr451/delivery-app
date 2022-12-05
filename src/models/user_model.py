@@ -24,12 +24,4 @@ class UserModel(Base):
         self.id = data.id
         self.username = data.username
         self.password = data.password
-        self.role_id = data.role.id
-        self.role = data.role
-        self.profile_id = data.profiele.id
-        self.profile = data.profile
-        self.contact_id = data.contact.id
-        self.contact = data.contact
-        self.address_id = data.address.id
-        self.address = data.address
         self.status = data.status
