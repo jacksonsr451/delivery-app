@@ -1,1 +1,2 @@
 from .category_repository_interface import CategoryRepositoryInterface
+from .category_repository import CategoryRepository
