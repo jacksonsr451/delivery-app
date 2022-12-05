@@ -7,10 +7,10 @@ from src.models.offer_model import OfferModel
 from src.requests.offer_request import OfferRequest
 from src.response.offer_response import OfferResponse
 
-from . import CategoryRepositoryInterface
+from . import OfferRepositoryInterface
 
 
-class OfferRepository(CategoryRepositoryInterface):
+class OfferRepository(OfferRepositoryInterface):
     __session: Session
 
     def __init__(self, session: Session) -> None:

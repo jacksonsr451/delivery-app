@@ -7,10 +7,10 @@ from src.models.contact_model import ContactModel
 from src.requests.contact_request import ContactRequest
 from src.response.contact_response import ContactResponse
 
-from . import CategoryRepositoryInterface
+from . import ContactRepositoryInterface
 
 
-class ContactRepository(CategoryRepositoryInterface):
+class ContactRepository(ContactRepositoryInterface):
     __session: Session
 
     def __init__(self, session: Session) -> None:
