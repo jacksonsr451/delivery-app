@@ -16,27 +16,27 @@ class OfferRepository(CategoryRepositoryInterface):
     def __init__(self, session: Session) -> None:
         self.__session = session
 
-    def create(self, offer: OfferRequest) -> NoneType:
+    def create(self, request: OfferRequest) -> NoneType:
         try:
-            self.__session.add(OfferModel(offer))
+            self.__session.add(OfferModel(request))
             self.__session.commit()
         except Exception:
             raise OfferException('Erro ao adcionar dados')
 
-    def update(self, offer: OfferRequest) -> NoneType:
+    def update(self, request: OfferRequest) -> NoneType:
         data = (
             self.__session.query(OfferModel)
-            .filter(OfferModel.id == offer.id)
+            .filter(OfferModel.id == request.id)
             .one()
         )
         try:
-            data.id = offer.id
-            data.slug = offer.slug
-            data.category_id = offer.category.id
-            data.product_id = offer.producty.id
-            data.discount = offer.discount
-            data.created_at = offer.created_at
-            data.valid_until = offer.valid_until
+            data.id = request.id
+            data.slug = request.slug
+            data.category_id = request.category.id
+            data.product_id = request.producty.id
+            data.discount = request.discount
+            data.created_at = request.created_at
+            data.valid_until = request.valid_until
             self.__session.commit()
         except Exception:
             raise OfferException('Erro ao atualizar dados')

@@ -7,11 +7,11 @@ from src.response.offer_response import OfferResponse
 
 class OfferRepositoryInterface(ABC):
     @abstractmethod
-    def create(self, offer: OfferRequest) -> NoneType:
+    def create(self, request: OfferRequest) -> NoneType:
         """This method is required"""
 
     @abstractmethod
-    def update(self, offer: OfferRequest) -> NoneType:
+    def update(self, request: OfferRequest) -> NoneType:
         """This method is required"""
 
     @abstractmethod
