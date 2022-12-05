@@ -1,9 +1,6 @@
 from sqlalchemy.orm import Session
 
-from src.repositories.offer.offer_repository import OfferRepository
-from src.repositories.offer.offer_repository_interface import (
-    OfferRepositoryInterface,
-)
+from src.repositories.offer import OfferRepository, OfferRepositoryInterface
 
 from . import OfferServicesInterface
 from .offer_services import OfferServices
