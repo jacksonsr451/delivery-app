@@ -8,7 +8,7 @@ class CategoryRequest:
     description: str
 
     def __init__(self, schema: dict[str, Any]) -> None:
-        self.id = schema.get('id')
-        self.slug = schema.get('slug')
-        self.title = schema.get('title')
-        self.description = schema.get('descripion')
+        self.id = schema.form['id']
+        self.slug = schema.form['slug']
+        self.title = schema.form['title']
+        self.description = schema.form['descripion']

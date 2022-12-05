@@ -9,8 +9,8 @@ class ContactRequest:
     email: str
 
     def __init__(self, schema: dict[str, Any]) -> None:
-        self.id = schema.get('id')
-        self.phone = schema.get('phone')
-        self.whattsapp = schema.get('whattsapp')
-        self.telegram = schema.get('telegram')
-        self.email = schema.get('email')
+        self.id = schema.form['id']
+        self.phone = schema.form['phone']
+        self.whattsapp = schema.form['whattsapp']
+        self.telegram = schema.form['telegram']
+        self.email = schema.form['email']

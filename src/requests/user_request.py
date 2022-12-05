@@ -1,4 +1,4 @@
-from typing import Any
+from flask import Request
 
 from .address_request import AddressRequest
 from .contact_request import ContactRequest
@@ -15,11 +15,11 @@ class UserRequest:
     contact: ContactRequest
     address: AddressRequest
 
-    def __init__(self, schema: dict[str, Any]) -> None:
-        self.id = schema.get('id')
-        self.username = schema.get('username')
-        self.password = schema.get('password')
-        self.role = RoleRequest(schema.get('role'))
-        self.profile = ProfileRequest(schema.get('profile'))
-        self.contact = ContactRequest(schema.get('contact'))
-        self.address = AddressRequest(schema.get('address'))
+    def __init__(self, schema: Request) -> None:
+        self.id = schema.form['id']
+        self.username = schema.form['username']
+        self.password = schema.form['password']
+        self.role = RoleRequest(schema.form['role'])
+        self.profile = ProfileRequest(schema.form['profile'])
+        self.contact = ContactRequest(schema.form['contact'])
+        self.address = AddressRequest(schema.form['address'])

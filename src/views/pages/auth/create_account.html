@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="content">
-    <form action="" method="POST">
+    <form action="{{ url_for('create_account') }}" method="POST">
         <div class="input">
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username">

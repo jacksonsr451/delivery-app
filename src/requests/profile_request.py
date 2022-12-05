@@ -6,5 +6,5 @@ class ProfileRequest:
     name: str
 
     def __init__(self, schema: dict[str, Any]) -> None:
-        self.id = schema.get('id')
-        self.name = schema.get('name')
+        self.id = schema.form['id']
+        self.name = schema.form['name']

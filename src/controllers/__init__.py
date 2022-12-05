@@ -42,5 +42,5 @@ def init_controllers(app: Flask, config: dict[str, Any]):
         app=app, services=config['services']['UserServices']
     )
     init_auth_controllers(
-        app=app, services=config['services']['UserServices']
+        app=app, services=config['services']['AuthServices']
     )

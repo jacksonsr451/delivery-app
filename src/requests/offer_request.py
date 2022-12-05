@@ -15,10 +15,10 @@ class OfferRequest:
     valid_until: date
 
     def __init__(self, schema: dict[str, Any]) -> None:
-        self.id = schema.get('id')
-        self.slug = schema.get('slug')
-        self.category = CategoryRequest(schema.get('category'))
-        self.product = ProductRequest(schema.get('producty'))
-        self.discount = schema.get('discount')
-        self.created_at = schema.get('created_at')
-        self.valid_until = schema.get('valid_until')
+        self.id = schema.form['id']
+        self.slug = schema.form['slug']
+        self.category = CategoryRequest(schema.form['category'])
+        self.product = ProductRequest(schema.form['producty'])
+        self.discount = schema.form['discount']
+        self.created_at = schema.form['created_at']
+        self.valid_until = schema.form['valid_until']

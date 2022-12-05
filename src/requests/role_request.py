@@ -6,5 +6,5 @@ class RoleRequest:
     role: str
 
     def __init__(self, schema: dict[str, Any]) -> None:
-        self.id = schema.get('id')
-        self.role = schema.get('role')
+        self.id = schema.form['id']
+        self.role = schema.form['role']

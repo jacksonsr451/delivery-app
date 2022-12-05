@@ -10,9 +10,9 @@ class AddressRequest:
     number: str
 
     def __init__(self, schema: dict[str, Any]) -> None:
-        self.id = schema.get('id')
-        self.country = schema.get('country')
-        self.state = schema.get('state')
-        self.neigborhod = schema.get('neigborhod')
-        self.street = schema.get('street')
-        self.number = schema.get('number')
+        self.id = schema.form['id']
+        self.country = schema.form['country']
+        self.state = schema.form['state']
+        self.neigborhod = schema.form['neigborhod']
+        self.street = schema.form['street']
+        self.number = schema.form['number']
