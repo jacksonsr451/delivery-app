@@ -1,9 +1,7 @@
 from sqlalchemy.orm import Session
 
-from src.repositories.category.category_repository import CategoryRepository
-from src.repositories.category.category_repository_interface import (
-    CategoryRepositoryInterface,
-)
+from src.repositories.category import CategoryRepository, CategoryRepositoryInterface
+
 
 from . import CategoryServicesInterface
 from .category_services import CategoryServices
