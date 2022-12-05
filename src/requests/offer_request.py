@@ -9,7 +9,7 @@ class OfferRequest:
     slug: str
     category: CategoryRequest
     product: ProductRequest
-    discount: str
+    discount: float
     created_at: date
     valid_until: date
 

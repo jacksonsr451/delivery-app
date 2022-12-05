@@ -8,7 +8,7 @@ class OfferResponse:
     slug: str
     category: CategoryResponse
     product: ProductResponse
-    discount: str
+    discount: float
     created_at: date
     valid_until: date
 
