@@ -7,7 +7,7 @@ from src.models.user_model import UserModel
 from src.requests.user_request import UserRequest
 from src.response.user_response import UserReponse
 
-from . import UserRepositoryInterface
+from .user_repository_interface import UserRepositoryInterface
 
 
 class UserRepository(UserRepositoryInterface):

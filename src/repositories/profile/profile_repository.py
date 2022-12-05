@@ -7,7 +7,7 @@ from src.models.profile_model import ProfileModel
 from src.requests.profile_request import ProfileRequest
 from src.response.profile_response import ProfileResponse
 
-from . import ProfileRepositoryInterface
+from .profile_repository_interface import ProfileRepositoryInterface
 
 
 class ProfileRepository(ProfileRepositoryInterface):

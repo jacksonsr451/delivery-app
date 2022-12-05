@@ -7,7 +7,7 @@ from src.models.offer_model import OfferModel
 from src.requests.offer_request import OfferRequest
 from src.response.offer_response import OfferResponse
 
-from . import OfferRepositoryInterface
+from .offer_repository_interface import OfferRepositoryInterface
 
 
 class OfferRepository(OfferRepositoryInterface):

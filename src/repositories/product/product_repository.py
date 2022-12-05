@@ -7,7 +7,7 @@ from src.models.product_model import ProductModel
 from src.requests.product_request import ProductRequest
 from src.response.product_response import ProductResponse
 
-from . import ProductRepositoryInterface
+from .product_repository_interface import ProductRepositoryInterface
 
 
 class ProductRepository(ProductRepositoryInterface):

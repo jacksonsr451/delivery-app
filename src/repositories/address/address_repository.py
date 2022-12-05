@@ -7,7 +7,7 @@ from src.models.address_model import AddressModel
 from src.requests.address_request import AddressRequest
 from src.response.address_response import AddressResponse
 
-from . import AddressRepositoryInterface
+from .address_repository_interface import AddressRepositoryInterface
 
 
 class AddressRepository(AddressRepositoryInterface):

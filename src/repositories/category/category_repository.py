@@ -7,7 +7,7 @@ from src.models.category_model import CategoryModel
 from src.requests.category_request import CategoryRequest
 from src.response.category_response import CategoryResponse
 
-from . import CategoryRepositoryInterface
+from .category_repository_interface import CategoryRepositoryInterface
 
 
 class CategoryRepository(CategoryRepositoryInterface):

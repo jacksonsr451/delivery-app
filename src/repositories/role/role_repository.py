@@ -7,7 +7,7 @@ from src.models.role_model import RoleModel
 from src.requests.role_request import RoleRequest
 from src.response.role_response import RoleResponse
 
-from . import RoleRepositoryInterface
+from .role_repository_interface import RoleRepositoryInterface
 
 
 class RoleRepository(RoleRepositoryInterface):
