@@ -7,11 +7,11 @@ from src.response.address_response import AddressResponse
 
 class AddressRepositoryInterface(ABC):
     @abstractmethod
-    def create(self, address: AddressRequest) -> NoneType:
+    def create(self, request: AddressRequest) -> NoneType:
         """This method is required"""
 
     @abstractmethod
-    def update(self, address: AddressRequest) -> NoneType:
+    def update(self, request: AddressRequest) -> NoneType:
         """This method is required"""
 
     @abstractmethod
