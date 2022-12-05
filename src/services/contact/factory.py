@@ -1,9 +1,6 @@
 from sqlalchemy.orm import Session
 
-from src.repositories.contact.contact_repository import ContactRepository
-from src.repositories.contact.contact_repository_interface import (
-    ContactRepositoryInterface,
-)
+from src.repositories.contact import ContactRepository, ContactRepositoryInterface
 
 from . import ContactServicesInterface
 from .contact_services import ContactServices
