@@ -1,0 +1,13 @@
+<div class="navbar__top">
+    <ul class="navegation">
+        <li><a href="{{ url_for('index') }}">HOME</a></li>
+    </ul>
+    <div class="buttons">
+        {% if session['user'] %}
+            <span>Olá - {{ session['user']['username'] }}</span>
+            <a href="{{ url_for('logout') }}">LOGOUT</a>
+        {% else %}
+            <a href="{{ url_for('page_login') }}">LOGIN</a>
+        {% endif %}
+    </div>
+</div>

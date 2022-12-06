@@ -1,1 +1,16 @@
-/*# sourceMappingURL=globals.css.map */
+nav {
+  flex: 1;
+  width: 100%;
+}
+nav .navbar__top {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .navbar__top ul li a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 0.5rem;
+}/*# sourceMappingURL=globals.css.map */

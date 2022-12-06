@@ -3,6 +3,18 @@
   padding: 0;
 }
 
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(31, 30, 30, 0.913);
+}
+a :hover {
+  color: rgba(31, 30, 30, 0.913);
+}
+
 body {
   flex: 1;
   width: 100vw;
@@ -22,12 +34,16 @@ input:focus {
   outline: none;
 }
 
+nav {
+  display: flex;
+  height: 5rem;
+}
+
 .container {
-  flex: 1;
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: calc(100% - 5rem);
 }
 
 .container > header {

@@ -1,0 +1,48 @@
+.navbar__top {
+    display: flex;
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $secondary-background-color;
+
+    ul {
+        li {
+            padding: 1rem;
+            margin: .5rem;
+            a {
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding: 1rem;
+                margin: .5rem;
+
+                background-color: $primary-color;
+                border-radius: .8rem;
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: $secondary-text-color;
+        }
+
+        a {
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 1rem;
+            margin: .5rem;
+    
+            background-color: $primary-color;
+            border-radius: .8rem;
+        }
+    }
+}
