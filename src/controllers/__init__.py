@@ -10,6 +10,7 @@ from src.controllers.offer_controller import init_offer_controllers
 from src.controllers.product_controller import init_product_controllers
 from src.controllers.profile_controller import init_profile_controllers
 from src.controllers.role_controller import init_role_controllers
+from src.controllers.shoping_card_controller import init_shopping_card
 from src.controllers.user_controller import init_user_controllers
 
 from .home_controller import home_controller
@@ -38,3 +39,4 @@ def init_controllers(app: Flask, config: dict[str, Any]):
     init_role_controllers(app=app, services=config['services']['RoleServices'])
     init_user_controllers(app=app, services=config['services']['UserServices'])
     init_auth_controllers(app=app, services=config['services']['AuthServices'])
+    init_shopping_card(app=app)

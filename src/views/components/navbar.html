@@ -5,8 +5,10 @@
     <div class="buttons">
         {% if session['user'] %}
             <span>Olá - {{ session['user']['username'] }}</span>
+            <a href="{{ url_for('page_card') }}">🛒</a>
             <a href="{{ url_for('logout') }}">LOGOUT</a>
         {% else %}
+            <a href="{{ url_for('page_account') }}">CRIAR CONTA</a>
             <a href="{{ url_for('page_login') }}">LOGIN</a>
         {% endif %}
     </div>

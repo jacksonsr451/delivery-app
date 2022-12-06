@@ -5,7 +5,7 @@ from src.services.auth import AuthServicesInterface
 
 def init_auth_controllers(app: Flask, services: AuthServicesInterface) -> None:
     @app.route('/auth/create-account', methods=['GET'])
-    def index_account() -> str:
+    def page_account() -> str:
         return render_template('pages/auth/create_account.html')
 
     @app.route('/auth/create-account', methods=['POST'])
@@ -15,7 +15,7 @@ def init_auth_controllers(app: Flask, services: AuthServicesInterface) -> None:
             return redirect(url_for('page_login'))
         except Exception as error:
             print(error)
-            return redirect(url_for('index_account'))
+            return redirect(url_for('page_account'))
 
     @app.route('/auth/login', methods=['GET'])
     def page_login() -> str:
