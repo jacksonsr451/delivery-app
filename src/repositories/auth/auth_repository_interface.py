@@ -17,3 +17,7 @@ class AuthRepositoryInterface(ABC):
     @abstractmethod
     def delete(self, id: str) -> NoneType:
         """This method is required"""
+
+    @abstractmethod
+    def login(self, username: str, password: str) -> AuthReponse:
+        """This method is required"""

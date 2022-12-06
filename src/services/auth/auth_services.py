@@ -4,6 +4,7 @@ from flask import Request
 
 from src.repositories.auth import AuthRepositoryInterface
 from src.requests.auth_request import AuthRequest
+from src.response.auth_response import AuthReponse
 
 from .auth_services_interface import AuthServicesInterface
 
@@ -22,3 +23,9 @@ class AuthServices(AuthServicesInterface):
 
     def delete(self, id: str) -> NoneType:
         self.__repository.delete(id=id)
+
+    def login(self, request: Request) -> AuthReponse:
+        return self.__repository.login(
+            username=request.form['username'],
+            password=request.form['password'],
+        )

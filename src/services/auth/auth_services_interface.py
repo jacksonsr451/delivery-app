@@ -3,6 +3,8 @@ from types import NoneType
 
 from flask import Request
 
+from src.response.auth_response import AuthReponse
+
 
 class AuthServicesInterface(ABC):
     @abstractmethod
@@ -15,4 +17,8 @@ class AuthServicesInterface(ABC):
 
     @abstractmethod
     def delete(self, id: str) -> NoneType:
+        """This method is required"""
+
+    @abstractmethod
+    def login(self, request: Request) -> AuthReponse:
         """This method is required"""

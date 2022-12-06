@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from typing import Any
 
 from src.services.address import address_service_factory
@@ -12,7 +14,10 @@ from src.services.user import user_services_factory
 
 from .database import session
 
+load_dotenv()
+
 config: dict[str, Any] = {
+    'secret_key': os.getenv('APP_SECRET_KEY'),
     'services': {
         'AddressServices': address_service_factory(session=session),
         'CategoryServices': category_service_factory(session=session),
